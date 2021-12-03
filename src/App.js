@@ -35,12 +35,12 @@ function App() {
   return (
     <div>
       <Provider store={store}>
-      <Router>
+      <Router basename={process.env.PUBLIC_URL}>
         <IconContext.Provider value={{
           size:'25',
         }}>
         <Switch>
-          <Route exact path='/Measurement-App'>
+          <Route exact path='/'>
             <Header/>
           </Route>
           <Route path='/settingShirts'>
