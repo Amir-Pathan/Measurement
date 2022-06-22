@@ -3,6 +3,7 @@ import {AccessData} from '../redux'
 import {connect} from 'react-redux'
 import {Link} from 'react-router-dom'
 import { BiSpreadsheet} from 'react-icons/bi'
+import {Avatar} from '@material-ui/core'
 
 class CustomerList extends Component{
 
@@ -69,16 +70,18 @@ class CustomerList extends Component{
                                icon = first[0]
                             }
 
-                              return <div key={index} style={{display:'flex',flexDirection:'row',justifyContent:"space-between",borderBottom:'2px solid black'}}>
+                              return <div key={index} style={{display:'flex',flexDirection:'row',justifyContent:"space-between",borderBottom:'2px solid black',}}>
                                   <div style={{width:'90%',display:'flex',flexDirection:'row'}}> 
-                                    <h3 style={{backgroundColor:color[indx],width:'8%',paddingTop:'10px',fontSize:'100%',
-                                        textAlign:'center',alignItems:'center',
-                                        borderRadius:'70%'}}>{icon}</h3>
+                                    <Avatar style={{
+                                        backgroundColor:color[index],
+                                        marginTop:'15px',
+                                        marginLeft:'10px'
+                                    }}>{icon}</Avatar>
                                     <h3 style={{marginTop:'25px',marginLeft:'60px'}}>{i.name}</h3>
                                </div>
                                     <div>
                                         <Link to='/details'>
-                                            <BiSpreadsheet color='black' style={{marginLeft:'25px',marginTop:'10px'}} 
+                                            <BiSpreadsheet color='black' style={{marginLeft:'25px',marginTop:'10px',marginRight:'100px'}} 
                                             size='50' onClick={()=>this.user(i)}/>
                                         </Link>
                                     </div>

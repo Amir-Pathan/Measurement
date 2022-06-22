@@ -49,3 +49,12 @@
 .box{
   width: 60%;
 }
+.deliveryDate{
+  text-align: right;
+  margin-right: 25px;
+}
+.date{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}

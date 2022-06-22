@@ -33,7 +33,7 @@ function Header(){
                     <AiOutlinePlusCircle onClick={Customer} cursor='pointer'/>
                 </div>
             </div>
-            <CustomerList/>
+            <CustomerList />
             </>
         )
 

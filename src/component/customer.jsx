@@ -11,7 +11,7 @@ class Customer extends Component{
         this.state={
             name : '',
             no :'',
-            address :''
+            address :'',
         }
         this.submit=this.submit.bind(this)
     }
@@ -101,11 +101,10 @@ class Customer extends Component{
     
                 }
             }   
-               }
-                    
+          }                
     }
-
     render(){
+
         return(
             <>
                <div>

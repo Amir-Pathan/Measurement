@@ -12,6 +12,7 @@ import User from './component/user'
 import AddMeasurement from './component/shirtmeasurement';
 import Show from './component/measuremetshow';
 import Search from './component/search';
+import axios from 'axios'
 
 function App() {
 
@@ -29,6 +30,7 @@ function App() {
     if(check===null){
       localStorage.setItem('details',JSON.stringify(details))
     }
+    
   },[])
 
 
@@ -65,7 +67,7 @@ function App() {
         <Route path='/addPentMeasurement'>
           <AddMeasurement controll='Pent'/> 
         </Route>
-        <Route path='/showShirtMeasurement'>
+        <Route path='/showShirtMeasurement/:id'>
           <Show controll='shirts'/>
         </Route>
         <Route path='/showPentMeasurement'>

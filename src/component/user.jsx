@@ -8,7 +8,7 @@ function User(){
     const user= sessionStorage.getItem('user')
 
     const details= JSON.parse(user)
-    console.log(details);
+    console.log(details.no);
 
     const length = Object.keys(details.shirts).length
     const pentLength = Object.keys(details.pents).length
@@ -24,7 +24,7 @@ function User(){
     }
 
     const ShowShirt=()=>{
-        history.push('/showShirtMeasurement')
+        history.push('/showShirtMeasurement/'+details.no)
     }
 
     const showPent=()=>{

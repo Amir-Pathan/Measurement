@@ -1,6 +1,7 @@
 import React from 'react'
 import {BiArrowBack} from 'react-icons/bi' 
 import { useHistory } from 'react-router'
+import Button from '@material-ui/core/Button'
 
 function Show({controll}){
 
@@ -20,6 +21,7 @@ function Show({controll}){
     return(
         <>
         <BiArrowBack size='50' onClick={details} cursor='pointer'/>
+        <Button>Update</Button>
         {
             controll==='shirts'?
             arrs.length>0?
